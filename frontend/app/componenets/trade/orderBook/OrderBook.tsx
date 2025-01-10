@@ -68,7 +68,16 @@ export default function OrderBook({ path }: { path: string }) {
           <AsksTable path={path} />
         </Suspense>
 
-        {<CurrentValue /> || <Skeleton />}
+        {<CurrentValue /> || <Skeleton
+          className="w-full h-full animate-pulse rounded-md"
+          baseColor="rgba(32, 33, 39, 0.8)" // Base color for the skeleton background
+          highlightColor="rgba(32, 33, 39, 0.6)" // Highlight color for the shimmer
+          style={{
+            backgroundColor: "rgba(32, 33, 39, 1)", // Ensures the background matches
+            borderRadius: "8px", // Optional: Rounded corners
+          }}
+
+        />}
 
         <Suspense fallback={
           <div className="w-full h-64">
