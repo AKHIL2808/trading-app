@@ -5,7 +5,7 @@ export const cryptocurrencies = [
   { symbol: 'BOME', name: 'Book Of Meme', image: '../../public/images/bome.webp' },
   { symbol: 'BONK', name: 'Bonk', image: '../../public/images/bonk.webp' },
   { symbol: 'BTC', name: 'Bitcoin', image: '../../public/images/btc.webp' },
-  { symbol: 'CLOUD', name: 'Sanctum', image: '../../public/images/cloud.png' },
+  // { symbol: 'CLOUD', name: 'Sanctum', image: '../../public/images/cloud.png' },
   // { symbol: 'DBR', name: 'deBridge', image: '../../public/images/dbr.webp' },
   { symbol: 'DRIFT', name: 'Drift', image: '../../public/images/drift.webp' },
   { symbol: 'ENA', name: 'Ethena', image: '../../public/images/ena.webp' },
