@@ -1,6 +1,5 @@
 import { Sequelize } from "sequelize"
 const url = process.env.DATABASE_URL
-console.log(url)
 const sequelize = new Sequelize(`${url}`, {
   dialect: 'postgres', protocol: 'postgres',
   dialectOptions: {
