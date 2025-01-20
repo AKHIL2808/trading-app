@@ -1,7 +1,8 @@
 import { Sequelize } from "sequelize"
-const sequelize = new Sequelize('postgres://akhil:akhil@localhost:5432/timescale_data', {
-  dialect: 'postgres',
-  protocol: 'postgres',
+const url = process.env.DATABASE_URL
+console.log(url)
+const sequelize = new Sequelize(`${url}`, {
+  dialect: 'postgres', protocol: 'postgres',
   dialectOptions: {
     ssl: false,
   },
