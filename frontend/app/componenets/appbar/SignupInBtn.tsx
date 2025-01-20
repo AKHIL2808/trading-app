@@ -1,4 +1,4 @@
-import { auth } from "@/auth";
+import { auth, signOut } from "@/auth";
 import Link from "next/link";
 export default async function ConditionBtn() {
   const session = await auth()
@@ -12,7 +12,10 @@ export default async function ConditionBtn() {
   }
   return (
     <div className="flex flex-row-reverse m-2 p-2 items-center">
-      <img className="rounded-full w-11 h-11" src={session.user.image || ""} alt="avatar" />
+      <img className="rounded-full w-11 h-11" onClick={async () => {
+        "use server"
+        await signOut()
+      }} src={session.user.image || ""} alt="avatar" />
     </div>
   )
 }

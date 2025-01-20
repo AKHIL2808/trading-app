@@ -1,0 +1,21 @@
+
+
+version: "3.8"
+services:
+
+  userdb:
+    image: postgres:17
+    container_name: userdb
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: akhil 
+      POSTGRES_PASSWORD: akhil 
+      POSTGRES_DB: user_data
+    volumes:
+      - userdb_data:/var/lib/postgresql/data
+
+
+volumes:
+  userdb_data:
+    driver: local
