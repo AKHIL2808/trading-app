@@ -1,9 +1,15 @@
-import { Hono } from 'hono'
+import { createClient } from "redis"
 
-const app = new Hono()
+(async () => {
+  const redisClient = createClient()
+  await redisClient.connect()
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
+  while (true) {
+    const response = redisClient.rPop("messages" as string)
+    if (!response) {
+
+    } else {
+
+    }
+  }
 })
-
-export default app
